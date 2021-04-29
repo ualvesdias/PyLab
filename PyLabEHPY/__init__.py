@@ -1,1 +1,1 @@
-from PyLab.Lab import Lab
+from PyLabEHPY.Lab import Lab
