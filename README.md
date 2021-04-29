@@ -32,5 +32,3 @@ Ajuda para interagir com o PyLab:
 ```python
 >>> lab.Help()
 ```
-
-Para usar o módulo de forma automatizada a fim de responder às questões do PyLab, veja o arquivo PyLabSolver.py
