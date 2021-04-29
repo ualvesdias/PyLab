@@ -5,13 +5,13 @@ Abra um prompt do Python partindo da mesma pasta onde se encontra o módulo PyLa
 Digite a linha abaixo para importar o módulo:
 
 ```python
->>> import PyLab
+>>> import PyLabEHPY
 ```
 
 Iniciar um novo objeto para se comunicar com o lab:
 
 ```python
->>> lab = PyLab.Lab(host='IP')
+>>> lab = PyLabEHPY.Lab(host='IP')
 ```
 
 Registrar um novo usuário (necessário apenas uma vez):
@@ -24,7 +24,7 @@ GUARDE A CHAVE DE API!!!
 Caso precise efetuar login novamente, apenas crie o objeto lab e passe a chave de API:
 
 ```python
->>> lab = PyLab.Lab(host='IP', apikey=<chave_de_api>)
+>>> lab = PyLabEHPY.Lab(host='IP', apikey=<chave_de_api>)
 ```
 
 Ajuda para interagir com o PyLab:
