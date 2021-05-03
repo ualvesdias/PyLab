@@ -15,38 +15,36 @@ class Lab(object):
 
     def Help(self):
         self.help = '''
-        Iniciar um novo lab
-        lab = PyLab.Lab(host='<serverIP>')
-
-        Registrar um novo usuário
+        Registrar um novo usuário (Utilize um email válido):
         lab.Register('user', 'email')
 
         GUARDE A CHAVE DE API!!!
-        Caso precise efetuar login novamente:
+        
+        Para iniciar comunicação com o servidor:
         lab = PyLab.Lab(host='<serverIP>', apikey='<chave_de_api>')
 
-        Receber todas as perguntas
-        lab.GetQuestions()
-        Receber uma pergunta específica
-        lab.GetQuestions(<num>)
-
-        Receber sua pontuação
+        Receber sua pontuação e questões já resolvidas:
         lab.GetMyScore()
 
-        Receber o ScoreBoard
+        Ver o ScoreBoard:
         lab.GetScoreBoard()
 
-        Receber dados de uma questão
+        Receber todas as perguntas:
+        lab.GetQuestions()
+
+        Receber o enunciado de uma pergunta específica:
+        lab.GetQuestions(<num>)
+
+        Receber dados de uma questão:
         lab.GetQuestionData(<num>)
 
-        Enviar <data> como resposta de uma questão <num>
+        Enviar <data> como resposta da questão <num>:
         lab.SendAnswer(<num>, <data>)
 
-        Respondendo a questão #01:
+        Respondendo à questão #01:
         lab.SendAnswer(1, lab.GetQuestionData(1))
 
         Gerando uma nova chave da API:
-        lab = PyLab.Lab(host='<serverIP>')
         lab.NewKey('<email-usado-no-cadastro>')
         '''
         print(self.help)
