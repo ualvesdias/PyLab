@@ -19,7 +19,7 @@ class Lab(object):
         lab.Register('user', 'email')
 
         GUARDE A CHAVE DE API!!!
-        
+
         Para iniciar comunicação com o servidor:
         lab = PyLab.Lab(host='<serverIP>', apikey='<chave_de_api>')
 
@@ -162,3 +162,18 @@ class Lab(object):
             print('You have already answered this question.')
         elif req.status_code == 404:
             print(jsonResp['error'])
+
+    def ToggleRegistration(self, email='all', enabled='false'):
+        self.email = email
+        uri = f'/registration/{self.email}/{enabled}'
+        self.enabled = json.loads(enabled)
+        try:
+            req = r.get(self.url + uri, headers=self.header, verify=False)
+        except:
+            raise
+        if req.status_code == 200:
+            print(f'Registration {["enabled" if self.enabled else "disabled"][0]} for {self.email}!')
+        elif req.status_code == 400:
+            print('Registration not changed. Check the data sent.')
+        elif req.status_code == 403:
+            print('Toggle registration was not allowed.')

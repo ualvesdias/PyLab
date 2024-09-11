@@ -16,6 +16,7 @@ Iniciar um novo objeto para se comunicar com o lab:
 
 Registrar um novo usuário (necessário apenas uma vez):
 
+
 ```python
 >>> lab.Register('user','email')
 ```
